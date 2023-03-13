@@ -1,10 +1,12 @@
+import { generateProteinList } from "./proteins.js"
+
 export const createHTML = () => {
     return `
         <h1>Khan Descending Grill</h1>
         <article class="choices">
             <section class="choice_protein options">
                 <h2>Proteins</h2>
-         
+                ${generateProteinList()}
             </section>
             <section class="choice_veggie options">
                 <h2>Veggies</h2>

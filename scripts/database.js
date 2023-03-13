@@ -1,4 +1,4 @@
-const database = {
+export const database = {
 
     proteins: [
       { id: 1, name: "Armadillo", price: 5.0, isAnimal: true },
@@ -7,7 +7,7 @@ const database = {
       { id: 4, name: "Tofu", price: 1.49, isAnimal: false }
     ],
 
-    vegetables: [
+    veggies: [
       { id: 1, name: "Green beans", price: 0.45, isGreen: true },
       { id: 2, name: "Bean sprouts", price: 0.35, isGreen: false },
       { id: 3, name: "Lima beans", price: 0.29, isGreen: true },
@@ -34,11 +34,28 @@ const database = {
       { id: 4, name: "Habanero Explosion", price: 0.09, hasSodium: false }
     ],
 
-    bowlSizes: [
+    sizes: [
       { id: 1, size: "Bucket" },
       { id: 2, size: "Bread box" },
       { id: 3, size: "Rubbish Bin" }
-    ]
+    ],
+
+    orders: [
+      {
+        id: 1,
+        proteinId: 1,
+        veggieId: 1,
+        carbId: 1,
+        sauceId: 1,
+        seasoningId: 1,
+        sizeId: 1,
+        timestamp: 1614659931693
+      }
+  ],
+
+  orderBuilder: {}
     
   };
+  
+
   
