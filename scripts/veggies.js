@@ -1,4 +1,4 @@
-import { getVeggies } from "./dataAccess.js";
+import { getVeggies, setVeggie } from "./dataAccess.js";
 const arrayOfVeggies = getVeggies()
 
 export const generateVeggieList = () => {
@@ -17,3 +17,10 @@ export const generateVeggieList = () => {
         
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-veggies") {
+        setVeggie(parseInt(event.target.value))
+    }
+})

@@ -1,4 +1,4 @@
-import { getSizes } from "./dataAccess.js";
+import { getSizes, setSize } from "./dataAccess.js";
 const arrayOfSizes = getSizes()
 
 export const generateSizeList = () => {
@@ -11,3 +11,10 @@ export const generateSizeList = () => {
                 
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-sizes") {
+        setSize(parseInt(event.target.value))
+    }
+})

@@ -1,4 +1,4 @@
-import { getSauces } from "./dataAccess.js";
+import { getSauces, setSauce } from "./dataAccess.js";
 const arrayOfSauces = getSauces()
 
 export const generateSauceList = () => {
@@ -17,3 +17,10 @@ export const generateSauceList = () => {
         
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-sauces") {
+        setSauce(parseInt(event.target.value))
+    }
+})

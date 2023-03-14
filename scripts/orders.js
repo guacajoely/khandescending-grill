@@ -9,8 +9,7 @@ const arrayOfSizes = getSizes()
 
 const buildOrderListItem = (order) => {
 
-    // Remember that the function you pass to find() must return true/false
-
+    // The function passed to find() needs to return true/false
     const matchedProtein = arrayOfProteins.find((obj) => {
         return obj.id === order.proteinID
     })
@@ -35,7 +34,12 @@ const buildOrderListItem = (order) => {
         return obj.id === order.sizeID
     })
 
-    let totalCost = matchedProtein.price + matchedVeggie.price + matchedCarb.price + matchedSauce.price + MatchedSeasoning.price
+    let totalCost = 0
+    if(matchedProtein){totalCost += matchedProtein.price}
+    if(matchedVeggie){totalCost += matchedVeggie.price}
+    if(matchedCarb){totalCost += matchedCarb.price}
+    if(matchedSauce){totalCost += matchedSauce.price}
+    if(MatchedSeasoning){totalCost += MatchedSeasoning.price}
 
     const costString = totalCost.toLocaleString("en-US", {
         style: "currency",

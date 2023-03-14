@@ -1,4 +1,4 @@
-import { getSeasonings } from "./dataAccess.js";
+import { getSeasonings, setSeasoning } from "./dataAccess.js";
 const arrayOfSeasonings = getSeasonings()
 
 export const generateSeasoningsList = () => {
@@ -17,3 +17,10 @@ export const generateSeasoningsList = () => {
         
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-seasonings") {
+        setSeasoning(parseInt(event.target.value))
+    }
+})

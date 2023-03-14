@@ -1,4 +1,4 @@
-import { getProteins } from "./dataAccess.js";
+import { getProteins, setProtein } from "./dataAccess.js";
 const arrayOfProteins = getProteins()
 
 export const generateProteinList = () => {
@@ -14,6 +14,13 @@ export const generateProteinList = () => {
             return `<option value="${obj.id}">${obj.name} (${price})</option>`
             }).join("")
         }
-        
+
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-proteins") {
+        setProtein(parseInt(event.target.value))
+    }
+})

@@ -1,4 +1,4 @@
-import { getCarbs } from "./dataAccess.js";
+import { getCarbs, setCarb } from "./dataAccess.js";
 const arrayOfCarbs = getCarbs()
 
 export const generateCarbList = () => {
@@ -17,3 +17,10 @@ export const generateCarbList = () => {
         
             </select>`
 }
+
+
+document.addEventListener("change", (event) => {
+    if (event.target.id === "dropdown-carbs") {
+        setCarb(parseInt(event.target.value))
+    }
+})

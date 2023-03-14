@@ -5,6 +5,7 @@ import { generateSauceList } from "./sauces.js"
 import { generateSeasoningsList } from "./seasonings.js"
 import { generateSizeList } from "./sizes.js"
 import { generateVeggieList } from "./veggies.js"
+import { addCustomOrder } from "./dataAccess.js"
 
 export const createHTML = () => {
     return `
@@ -38,7 +39,7 @@ export const createHTML = () => {
         </article>
 
         <article>
-            <button>Place Order</button>
+            <button id="orderButton">Place Order</button>
         </article>
 
         <article class="orders">
@@ -47,3 +48,11 @@ export const createHTML = () => {
         </article>
     `
 }
+
+
+document.addEventListener("click", (clickEvent) => {
+    const itemClicked = clickEvent.target
+    if (itemClicked.id === "orderButton") {
+        addCustomOrder()
+    }
+})
