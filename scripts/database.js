@@ -43,12 +43,12 @@ export const database = {
     orders: [
       {
         id: 1,
-        proteinId: 1,
-        veggieId: 1,
-        carbId: 1,
-        sauceId: 1,
-        seasoningId: 1,
-        sizeId: 1,
+        proteinID: 1,
+        veggieID: 1,
+        carbID: 1,
+        sauceID: 1,
+        seasoningID: 1,
+        sizeID: 1,
         timestamp: 1614659931693
       }
   ],

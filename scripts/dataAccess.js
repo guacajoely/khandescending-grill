@@ -23,3 +23,7 @@ export const getSeasonings = () => {
 export const getSizes = () => {
     return database.sizes.map(obj => ({...obj}))
 }
+
+export const getOrders = () => {
+    return database.orders.map(obj => ({...obj}))
+}

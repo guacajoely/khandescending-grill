@@ -1,4 +1,5 @@
 import { generateCarbList } from "./carbs.js"
+import { generateOrdersList } from "./orders.js"
 import { generateProteinList } from "./proteins.js"
 import { generateSauceList } from "./sauces.js"
 import { generateSeasoningsList } from "./seasonings.js"
@@ -42,6 +43,7 @@ export const createHTML = () => {
 
         <article class="orders">
             <h2>Orders</h2>
+            ${generateOrdersList()}
         </article>
     `
 }
