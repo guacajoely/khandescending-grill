@@ -1,11 +1,11 @@
-import { getProteins } from "./dataAccess.js";
-const arrayOfProteins = getProteins()
+import { getCarbs } from "./dataAccess.js";
+const arrayOfCarbs = getCarbs()
 
-export const generateProteinList = () => {
-    return `<select id="dropdown-proteins">
-        <option value="0">Select a protein</option>
+export const generateCarbList = () => {
+    return `<select id="dropdown-carbs">
+        <option value="0">Select a carb</option>
 
-        ${arrayOfProteins.map(obj => {
+        ${arrayOfCarbs.map(obj => {
             const price = obj.price.toLocaleString("en-US", {
                 style: "currency",
                 currency: "USD",
